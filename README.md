@@ -95,3 +95,51 @@ https://www.figma.com/design/BLUZ9k6eQsGVWlM3ZCxetM/%E7%94%BB%E9%9D%A2%E9%81%B7%
 ・予約した日にちをLINEなどで通知する機能
 ・イベント告知とコミュニティのための掲示板
 ・ページネイトをするためにkaminariの導入
+
+##　ER図
+[![Image from Gyazo](https://i.gyazo.com/56162cb60e6bb6050fafbc90e01faa76.png)](https://gyazo.com/56162cb60e6bb6050fafbc90e01faa76)
+
+## ER図
+ users ||--o{ free_posts :""
+ users ||--o{ blood_posts: ""
+ users ||--o{ events: ""
+ 
+ users {
+        int id 
+        string email
+        string name
+        string password
+        string salt
+        int blood 
+        binary icon
+        datetime created_at
+        datetime updated_at
+    }
+
+ free_posts {
+        int id 
+        string title
+        string body
+        string comment
+        binary icon
+        datetime created_at
+        datetime updated_at
+    }
+ blood_posts{
+        string title
+        string body
+        string comment
+        bainary icon
+        datetime created_at
+        datetime updated_at
+    }
+
+ events {
+        string title
+        string body
+        string comment
+        bainary icon
+        datetime created_at
+        datetime updated_at
+    }
+
