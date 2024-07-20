@@ -97,15 +97,15 @@ https://www.figma.com/design/BLUZ9k6eQsGVWlM3ZCxetM/%E7%94%BB%E9%9D%A2%E9%81%B7%
 ・ページネイトをするためにkaminariの導入
 
 ##　ER図
-[![Image from Gyazo](https://i.gyazo.com/56162cb60e6bb6050fafbc90e01faa76.png)](https://gyazo.com/56162cb60e6bb6050fafbc90e01faa76)
+[![Image from Gyazo](https://i.gyazo.com/e64794da2f37ec7e8a8b06f843c14870.png)](https://gyazo.com/e64794da2f37ec7e8a8b06f843c14870)
 
 ## ER図
- users ||--o{ free_posts :""
- users ||--o{ blood_posts: ""
- users ||--o{ events: ""
+ users ||--o{ free_posts 
+ users ||--o{ blood_posts
+ users ||--o{ events
  
  users {
-        int id 
+        int id "PK"
         string email
         string name
         string password
@@ -117,7 +117,8 @@ https://www.figma.com/design/BLUZ9k6eQsGVWlM3ZCxetM/%E7%94%BB%E9%9D%A2%E9%81%B7%
     }
 
  free_posts {
-        int id 
+        int id "PK"
+        int user_id "FK"
         string title
         string body
         string comment
@@ -126,6 +127,8 @@ https://www.figma.com/design/BLUZ9k6eQsGVWlM3ZCxetM/%E7%94%BB%E9%9D%A2%E9%81%B7%
         datetime updated_at
     }
  blood_posts{
+        int id "PK"
+        int user_id "FK"
         string title
         string body
         string comment
@@ -135,11 +138,12 @@ https://www.figma.com/design/BLUZ9k6eQsGVWlM3ZCxetM/%E7%94%BB%E9%9D%A2%E9%81%B7%
     }
 
  events {
-        string title
+        int id "PK"
+        int user_id "FK" 
+        string title 
         string body
         string comment
         bainary icon
         datetime created_at
         datetime updated_at
     }
-
