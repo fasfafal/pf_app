@@ -97,18 +97,23 @@ https://www.figma.com/design/BLUZ9k6eQsGVWlM3ZCxetM/%E7%94%BB%E9%9D%A2%E9%81%B7%
 ・ページネイトをするためにkaminariの導入
 
 ##　ER図
-[![Image from Gyazo](https://i.gyazo.com/e64794da2f37ec7e8a8b06f843c14870.png)](https://gyazo.com/e64794da2f37ec7e8a8b06f843c14870)
+[![Image from Gyazo](https://i.gyazo.com/f91ab074381a8b2dafb0a3a11382cbf4.png)](https://gyazo.com/f91ab074381a8b2dafb0a3a11382cbf4)
 
 ## ER図
- users ||--o{ free_posts 
- users ||--o{ blood_posts
- users ||--o{ events
+ erDiagram
+ free_posts_comment }o--|| users :""
+ blood_posts_comment }o--|| users: ""
+ events_comment }o--|| users: ""
+ free_posts||--o{ free_posts_comment :""
+ blood_posts ||--o{ blood_posts_comment: ""
+ events ||--o{ events_comment: ""
+ 
  
  users {
         int id "PK"
         string email
         string name
-        string password
+        string encrypted_password
         string salt
         int blood 
         binary icon
@@ -121,7 +126,6 @@ https://www.figma.com/design/BLUZ9k6eQsGVWlM3ZCxetM/%E7%94%BB%E9%9D%A2%E9%81%B7%
         int user_id "FK"
         string title
         string body
-        string comment
         binary icon
         datetime created_at
         datetime updated_at
@@ -131,7 +135,6 @@ https://www.figma.com/design/BLUZ9k6eQsGVWlM3ZCxetM/%E7%94%BB%E9%9D%A2%E9%81%B7%
         int user_id "FK"
         string title
         string body
-        string comment
         bainary icon
         datetime created_at
         datetime updated_at
@@ -142,8 +145,26 @@ https://www.figma.com/design/BLUZ9k6eQsGVWlM3ZCxetM/%E7%94%BB%E9%9D%A2%E9%81%B7%
         int user_id "FK" 
         string title 
         string body
-        string comment
         bainary icon
         datetime created_at
         datetime updated_at
     }
+ free_posts_comment{
+        int id "PK"
+        int user_id "FK"
+        int free_posts_id "FK"
+        int content
+    }
+  blood_posts_comment{
+        int id "PK"
+        int user_id "FK"
+        int blood_posts_id "FK"
+        int content
+    }
+  events_comment{
+        int id "PK"
+        int user_id "FK"
+        int event_posts_id "FK"
+        int content
+    }
+
