@@ -97,10 +97,8 @@ https://www.figma.com/design/BLUZ9k6eQsGVWlM3ZCxetM/%E7%94%BB%E9%9D%A2%E9%81%B7%
 ・ページネイトをするためにkaminariの導入
 
 ##　ER図
-[![Image from Gyazo](https://i.gyazo.com/f91ab074381a8b2dafb0a3a11382cbf4.png)](https://gyazo.com/f91ab074381a8b2dafb0a3a11382cbf4)
-
-## ER図
- erDiagram
+[![Image from Gyazo](https://i.gyazo.com/a1ec9e5d10e1410edd287f1f87a48fe5.png)](https://gyazo.com/a1ec9e5d10e1410edd287f1f87a48fe5)
+erDiagram
  free_posts_comment }o--|| users :""
  blood_posts_comment }o--|| users: ""
  events_comment }o--|| users: ""
@@ -114,6 +112,7 @@ https://www.figma.com/design/BLUZ9k6eQsGVWlM3ZCxetM/%E7%94%BB%E9%9D%A2%E9%81%B7%
         string email
         string name
         string encrypted_password
+        string line_user_id
         string salt
         int blood 
         binary icon
@@ -167,4 +166,3 @@ https://www.figma.com/design/BLUZ9k6eQsGVWlM3ZCxetM/%E7%94%BB%E9%9D%A2%E9%81%B7%
         int event_posts_id "FK"
         int content
     }
-
