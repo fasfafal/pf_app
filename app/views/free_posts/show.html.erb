@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @free_post %>
+
+<div>
+  <%= link_to "Edit this free post", edit_free_post_path(@free_post) %> |
+  <%= link_to "Back to free posts", free_posts_path %>
+
+  <%= button_to "Destroy this free post", @free_post, method: :delete %>
+</div>
