@@ -4,9 +4,8 @@
 
 <div id="free_posts">
   <% @free_posts.each do |free_post| %>
-    <%= render free_post %>
     <p>
-      <%= link_to "Show this free post", free_post %>
+      <%= link_to free_post.title, free_post %>
     </p>
   <% end %>
 </div>
