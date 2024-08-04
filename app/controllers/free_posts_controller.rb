@@ -25,8 +25,8 @@ class FreePostsController < ApplicationController
 
     respond_to do |format|
       if @free_post.save
-        format.html { redirect_to free_post_url(@free_post), notice: "Free post was successfully created." }
-        format.json { render :show, status: :created, location: @free_post }
+        format.html { redirect_to free_posts_path, notice: "Free post was successfully created." }
+        format.json { render :index, status: :created, location: @free_post }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @free_post.errors, status: :unprocessable_entity }
