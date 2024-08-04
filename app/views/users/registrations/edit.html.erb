@@ -7,6 +7,10 @@
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
+  <div class="bloodtype-field">
+    <%= f.label :blood_type %><br />
+    <%= f.select :blood_type, options_for_select([['A型', 'A'], ['B型', 'B'], ['AB型', 'AB'], ['O型', 'O']], f.object.blood_type), include_blank: true %>
+  </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
