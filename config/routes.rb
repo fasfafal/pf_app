@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :free_posts
+  resources :free_posts do
+    resources :comments, only: %i[create edit], shallow: true
+  end
   devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   root 'home#index'

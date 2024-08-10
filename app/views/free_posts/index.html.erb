@@ -7,6 +7,9 @@
     <p>
       <%= link_to free_post.title, free_post %>
     </p>
+    <p>
+      作成者: <%= free_post.user ? free_post.user.id : '不明' %>
+    </p>
   <% end %>
 </div>
 

@@ -3,11 +3,14 @@ class FreePostsController < ApplicationController
 
   # GET /free_posts or /free_posts.json
   def index
-    @free_posts = FreePost.all
+    @free_posts = FreePost.includes(:user)
   end
 
   # GET /free_posts/1 or /free_posts/1.json
   def show
+    @free_post = FreePost.find(params[:id])
+    @comment = Comment.new
+    @comments = @free_post.comments.includes(:user).order(created_at: :desc)
   end
 
   # GET /free_posts/new
@@ -22,7 +25,7 @@ class FreePostsController < ApplicationController
   # POST /free_posts or /free_posts.json
   def create
     @free_post = FreePost.new(free_post_params)
-
+    @free_post.user_id = current_user.id
     respond_to do |format|
       if @free_post.save
         format.html { redirect_to free_posts_path, notice: "Free post was successfully created." }

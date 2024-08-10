@@ -1,6 +1,29 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @free_post %>
+
+  <p>
+    <strong>Title:</strong>
+    <%= @free_post.title %>
+  </p>
+
+  <p>
+    <strong>Body:</strong>
+    <%= @free_post.body %>
+  </p>
+
+  <p>
+    <strong>Created at:</strong>
+    <%= @free_post.created_at %>
+  </p>
+
+  <p>
+    <strong>Updated at:</strong>
+    <%= @free_post.updated_at %>
+  </p>
+
+  <p>
+  作成者: <%= @free_post.user ? @free_post.user.id : '不明' %>
+  </p> 
 
 <div>
   <%= link_to "Edit this free post", edit_free_post_path(@free_post) %> |
@@ -8,3 +31,9 @@
 
   <%= button_to "Destroy this free post", @free_post, method: :delete %>
 </div>
+<%= render 'comments/form', comment: @comment, free_post: @free_post %>
+  <table class="table">
+    <tbody id = "table-comment">
+      <%= render @comments %>
+    </tbody>
+  </table>
