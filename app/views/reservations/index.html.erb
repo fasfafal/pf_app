@@ -1,0 +1,8 @@
+<% @reservations.each do |reservation| %>
+    <p>
+      <%= simple_format(reservation.date.to_s) %>
+    </p>
+    <p>
+      <%= simple_format(reservation.note) %>
+    </p>
+<% end %> 
