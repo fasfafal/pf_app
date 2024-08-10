@@ -1,4 +1,5 @@
 class FreePostsController < ApplicationController
+  before_action :authenticate_user!, only: %i[ new edit update destroy ]
   before_action :set_free_post, only: %i[ show edit update destroy ]
 
   # GET /free_posts or /free_posts.json
