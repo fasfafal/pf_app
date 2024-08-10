@@ -1,3 +1,4 @@
+<p><%= simple_format(comment.body) %></p>
 <if current_user.own?(comment) %>
   <%= link_to "#", class: "edit-comment-link" do %>
 <% end %>
