@@ -1,0 +1,13 @@
+<%= form_with model: @reservation do |f| %>
+    <div>
+      <%= f.label :date, '予約日' %>
+      <%= f.date_select :date %>
+    </div>
+    <div>
+      <%= f.label :note, 'メモ' %>
+      <%= f.text_area :note %>
+    </div>
+    <div>
+      <%= f.submit '保存' %>
+    </div>
+<% end %>
