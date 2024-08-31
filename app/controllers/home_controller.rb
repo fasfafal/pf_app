@@ -5,4 +5,6 @@ class HomeController < ApplicationController
   end
   def policy
   end
+  def term
+  end
 end
