@@ -1,12 +1,14 @@
 <header>
-  <h1>ぶらっと</h1>
-  <% if user_signed_in? %>
-    <div><%= button_to "ログアウト", destroy_user_session_path, method: :delete  %></div>
-    <div><%= link_to "献血予約", new_reservation_path %></div>
-    <div><%= link_to "予約日一覧", reservations_path %></div>
-    <p>Welcome,<%= link_to current_user.id, users_show_path %></p>
-  <% else %>
-    <div><%= link_to "サインアップ", new_user_registration_path %></div>
-    <div><%= link_to "ログイン", new_user_session_path %></div>
-  <% end %>  
+  <div class="main top-main">
+    <h1>ぶらっと</h1>
+  </div>
+    <% if user_signed_in? %>
+      <div><%= button_to "ログアウト", destroy_user_session_path, method: :delete  %></div>
+      <div><%= link_to "献血予約", new_reservation_path %></div>
+      <div><%= link_to "予約日一覧", reservations_path %></div>
+      <p>Welcome,<%= link_to current_user.id, users_show_path %></p>
+    <% else %>
+      <div><%= link_to "サインアップ", new_user_registration_path %></div>
+      <div><%= link_to "ログイン", new_user_session_path %></div>
+    <% end %>  
 </header>
