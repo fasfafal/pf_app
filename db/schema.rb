@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_10_195934) do
+ActiveRecord::Schema[7.1].define(version: 2024_09_04_134644) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -22,6 +22,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_10_195934) do
     t.datetime "updated_at", null: false
     t.index ["free_post_id"], name: "index_comments_on_free_post_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "title"
+    t.text "body"
+    t.string "avatar"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "free_posts", force: :cascade do |t|
@@ -57,6 +66,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_10_195934) do
 
   add_foreign_key "comments", "free_posts"
   add_foreign_key "comments", "users"
+  add_foreign_key "events", "users"
   add_foreign_key "free_posts", "users"
   add_foreign_key "reservations", "users"
 end

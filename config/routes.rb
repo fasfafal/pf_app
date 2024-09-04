@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :events
   resources :reservations
   resources :free_posts do
     resources :comments, only: %i[create edit], shallow: true
