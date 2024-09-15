@@ -6,7 +6,9 @@
       <div><%= button_to "ログアウト", destroy_user_session_path, method: :delete  %></div>
       <div><%= link_to "献血予約", new_reservation_path %></div>
       <div><%= link_to "予約日一覧", reservations_path %></div>
-      <p>Welcome,<%= link_to current_user.id, users_show_path %></p>
+      <div>Welcome:</div> <%= link_to users_show_path, class: 'nav-link' do %>
+         <%= image_tag current_user.avatar.url, class: 'rounded-circle mr15', width: '40', height: '40' %>
+       <% end %>
     <% else %>
       <div><%= link_to "サインアップ", new_user_registration_path %></div>
       <div><%= link_to "ログイン", new_user_session_path %></div>
