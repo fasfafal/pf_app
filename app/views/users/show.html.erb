@@ -1,1 +1,8 @@
 <p>Mypage <%= @user.id %></p>
+<%= link_to "プロフィール編集" , edit_user_registration_path, class: 'btn btn-success float-right' %>
+<table class="table">
+  <tr>
+    <th scope="row"><%= User.human_attribute_name(:avatar) %></th>
+    <td><%= image_tag current_user.avatar_url, class: 'rounded-circle', size: '50x50' %></td>
+  </tr>
+</table>

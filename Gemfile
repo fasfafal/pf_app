@@ -25,6 +25,7 @@ gem "stimulus-rails"
 gem "carrierwave", "~> 2.0"
 gem "fog-aws"
 gem "dotenv-rails"
+gem "mini_magick"
 
 # Bundle and process CSS [https://github.com/rails/cssbundling-rails]
 gem "cssbundling-rails"
