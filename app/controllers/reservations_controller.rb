@@ -5,6 +5,9 @@ class ReservationsController < ApplicationController
     def new
       @reservation = Reservation.new
     end
+    def edit
+      @reservation = Reservation.find(params[:id])
+    end
     def create
       @reservation = current_user.reservations.new(reservation_params)
       if @reservation.save
@@ -13,8 +16,18 @@ class ReservationsController < ApplicationController
         render :new
       end
     end
-    def edit
+
+    def update
+        respond_to do |format|
+          @reservation = current_user.reservations.find(params[:id])
+          if @reservation.update(reservation_params)
+            format.html{redirect_to reservations_path, notice: "タスクの更新に成功しました"} 
+          else
+            format.html { render :edit, status: :unprocessable_entity }
+          end
+      end
     end
+    
     def destroy
       @reservation = Reservation.find_by(id: params[:id])
         @reservation.destroy!
