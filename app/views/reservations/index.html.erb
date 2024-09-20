@@ -1,12 +1,17 @@
 <% @reservations.each do |reservation| %>
-    <p>
-      <%= simple_format(reservation.date.to_s) %>
-    </p>
-    <p>
-      <%= simple_format(reservation.note) %>
-    </p>
+   <%= month_calendar do |date| %>
+    <%= date %>
+    <% if date == reservation.date && reservation.user_id == current_user.id %>
+      <p>
+        <%= simple_format('予約日') %>
+      </p>
+      <p>
+        <%= simple_format(reservation.note) %>
+      </p>
 
-  <%= link_to '編集', edit_reservation_path(reservation) %>
+      <%= link_to '編集', edit_reservation_path(reservation) %>
   
-  <%= button_to '削除', reservation, method: :delete, data: { confirm: '本当に削除しますか？' } %>
+      <%= button_to '削除', reservation, method: :delete, data: { confirm: '本当に削除しますか？' } %>
+    <% end %>
+  <% end %>
 <% end %> 
