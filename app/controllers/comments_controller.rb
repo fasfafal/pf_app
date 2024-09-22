@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!, only: %i[ create destroy ]
   def create
     comment = current_user.comments.build(comment_params)
     if comment.save
@@ -6,6 +7,11 @@ class CommentsController < ApplicationController
     else
       redirect_to free_post_path(comment.free_post), danger: "失敗した"
     end
+  end
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    redirect_to free_post_path(@comment.free_post), success: "コメントを削除しました"
   end
 
   private
