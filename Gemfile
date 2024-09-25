@@ -27,7 +27,8 @@ gem "fog-aws"
 gem "dotenv-rails"
 gem "mini_magick"
 gem "simple_calendar"
-
+gem "omniauth-line"
+gem "omniauth-rails_csrf_protection"
 # Bundle and process CSS [https://github.com/rails/cssbundling-rails]
 gem "cssbundling-rails"
 
