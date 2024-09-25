@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   resources :free_posts do
     resources :comments, only: %i[create edit], shallow: true
   end
-  devise_for :users
+  devise_for :users, controllers: {
+    omniauth_callbacks: "omniauth_callbacks",
+    sessions: 'users/sessions'
+  }
   get "users/show" => "users#show"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   root 'home#index'
