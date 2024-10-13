@@ -1,0 +1,20 @@
+.tab-container {
+    display: flex; // フレックスボックスを使用して横並びに
+    border-bottom: 2px solid #ccc; // 下にボーダーを追加
+  
+    .tab {
+      padding: 10px 20px; // タブの内側の余白
+      cursor: pointer; // カーソルをポインターに
+      text-decoration: none; // リンクの下線を消す
+      color: #333; // テキストカラー
+  
+      &:hover {
+        background-color: #f0f0f0; // ホバー時の背景色
+      }
+  
+      &.active {
+        font-weight: bold; // アクティブタブの太字
+        border-bottom: 2px solid #007bff; // アクティブタブの下にボーダー
+      }
+    }
+  }
