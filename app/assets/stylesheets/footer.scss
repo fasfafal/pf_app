@@ -1,0 +1,9 @@
+.div-container {
+    display: flex; // フレックスボックスを使用して横並びにする
+    justify-content: space-between; // 要素間のスペースを均等に分配
+    align-items: center; // 縦方向の中央揃え
+  }
+  
+  .div-container div {
+    margin: 0 10px; // 要素間に適度なマージンを追加
+  }
