@@ -43,6 +43,10 @@ header {
         margin-left: 10px; // 画像とテキストの間隔を開ける
       }
     }
+    .welcome-container {
+        display: flex; // フレックスボックスを使用
+        align-items: center; // 縦方向の中央揃え
+      }
   button {
     background-color: $primary-color; // ボタンの背景色
     color: white; // ボタンの文字色
