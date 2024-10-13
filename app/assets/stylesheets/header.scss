@@ -1,0 +1,54 @@
+$primary-color: #b91e68; // h1の色を変数に設定
+$background-color: #f8f9fa; // 背景色を変数に設定
+
+header {
+    display: flex; // フレックスボックスを使ってレイアウト
+    justify-content: space-between; // コンテンツを左右に寄せる
+    align-items: center; // 垂直方向に中央揃え
+    padding: 20px; // 上下に余白を追加
+    background-color: #f8f9fa; // 背景色
+  
+    .main {
+      flex-grow: 1; // 残りのスペースを埋める
+  
+      h1 {
+        color: #b91e68; // h1の色
+        font-size: 2.5em; // フォントサイズを大きく
+        font-weight: bold; // 太字にする
+        text-align: left; // 左寄せ
+      }
+    }
+  
+    .user-info {
+      display: flex; // 横並びにする
+      align-items: center; // 垂直方向に中央揃え
+  
+      .nav-link {
+        margin: 0 10px; // リンク同士の間隔を開ける
+        color: #333; // リンクの色
+        text-decoration: none; // 下線を消す
+  
+        &:hover {
+          color: #b91e68; // ホバー時に色を変更
+          text-decoration: underline; // ホバー時に下線をつける
+        }
+      }
+  
+      img {
+        border-radius: 50%; // 画像を丸くする
+        margin-left: 10px; // 画像とテキストの間隔を開ける
+      }
+    }
+  button {
+    background-color: $primary-color; // ボタンの背景色
+    color: white; // ボタンの文字色
+    border: none; // ボーダーを消す
+    padding: 10px 20px; // ボタン内の余白
+    border-radius: 5px; // 角を丸くする
+    cursor: pointer; // カーソルをポインターに
+
+    &:hover {
+      background-color: darken($primary-color, 10%); // ホバー時に少し暗くする
+    }
+  }
+}
