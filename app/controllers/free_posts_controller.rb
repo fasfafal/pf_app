@@ -53,14 +53,14 @@ class FreePostsController < ApplicationController
 
   # DELETE /free_posts/1 or /free_posts/1.json
   def destroy
-    if @post.user == current_user
+    if @free_post.user == current_user
       @free_post.destroy!
       respond_to do |format|
         format.html { redirect_to free_posts_url, notice: "Free post was successfully destroyed." }
         format.json { head :no_content }
       end
     else
-      redirect_to posts_path, alert: '削除権限がありません'
+      redirect_to free_posts_path, alert: '削除権限がありません'
     end
   end
 
