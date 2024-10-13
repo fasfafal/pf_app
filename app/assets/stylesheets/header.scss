@@ -19,6 +19,10 @@ header {
       }
     }
   
+    .home-link {
+        text-decoration: none; // 下線を消去
+        color: inherit; // テキストの色を親要素から継承
+      }
     .user-info {
       display: flex; // 横並びにする
       align-items: center; // 垂直方向に中央揃え
