@@ -10,10 +10,13 @@
       flex:1 ; // 均等に広がるようにする
       text-align: center; // テキストを中央揃え
       padding: 50px 20px; // タブの内側の余白
-      background-color: #007bff; //ボタンの背景色
       cursor: pointer; // カーソルをポインターに
+
+      a {
       text-decoration: none; // リンクの下線を消す
       color: #b91e68; // テキストカラー
+      }
+
   
       &:hover {
         background-color: #f0f0f0; // ホバー時の背景色
