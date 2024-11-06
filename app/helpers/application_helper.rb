@@ -11,7 +11,7 @@ module ApplicationHelper
       og: {
         site_name: 'ぶらっと',
         title: 'ぶらっと',
-        description: '献血を利用する人を増やす事を目的としたアプリです!',
+        description: '献血を利用する人達のコミュニティを育むことを目的としたアプリです!',
         type: 'website',
         url: 'https://pf-app-udpx.onrender.com',
         image: image_url('OGP.jpg'),
