@@ -31,7 +31,7 @@ gem "omniauth-line"
 gem "omniauth-rails_csrf_protection"
 # Bundle and process CSS [https://github.com/rails/cssbundling-rails]
 gem "cssbundling-rails"
-
+gem "meta-tags"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
