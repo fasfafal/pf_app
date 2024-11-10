@@ -409,7 +409,7 @@ DEPENDENCIES
   debug
   devise
   dotenv-rails
-  error_highlight (>= 0.3.0)
+  error_highlight (>= 0.6.0)
   factory_bot_rails
   fog-aws
   jbuilder
