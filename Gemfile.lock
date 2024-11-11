@@ -132,7 +132,7 @@ GEM
       dotenv (= 3.1.4)
       railties (>= 6.1)
     drb (2.2.1)
-    error_highlight (0.6.0)
+    error_highlight (0.3.0)
     erubi (1.13.0)
     excon (1.2.0)
     factory_bot (6.5.0)
@@ -410,7 +410,7 @@ DEPENDENCIES
   debug
   devise
   dotenv-rails
-  error_highlight (>= 0.6.0)
+  error_highlight (= 0.3.0)
   factory_bot_rails
   fog-aws
   jbuilder
