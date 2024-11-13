@@ -29,6 +29,7 @@ gem "mini_magick"
 gem "simple_calendar"
 gem "omniauth-line"
 gem "omniauth-rails_csrf_protection"
+gem 'rails-i18n'
 # Bundle and process CSS [https://github.com/rails/cssbundling-rails]
 gem "cssbundling-rails"
 gem "meta-tags"
