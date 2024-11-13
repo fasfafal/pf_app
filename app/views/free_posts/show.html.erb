@@ -2,22 +2,22 @@
 
 
   <p>
-    <strong>Title:</strong>
+    <strong>タイトル:</strong>
     <%= @free_post.title %>
   </p>
 
   <p>
-    <strong>Body:</strong>
+    <strong>本文:</strong>
     <%= @free_post.body %>
   </p>
 
   <p>
-    <strong>Created at:</strong>
+    <strong>作成日時:</strong>
     <%= @free_post.created_at %>
   </p>
 
   <p>
-    <strong>Updated at:</strong>
+    <strong>更新日時:</strong>
     <%= @free_post.updated_at %>
   </p>
 
@@ -26,10 +26,10 @@
   </p> 
 
 <div>
-  <%= link_to "Edit this free post", edit_free_post_path(@free_post) %> |
-  <%= link_to "Back to free posts", free_posts_path %>
+  <%= link_to "この投稿を編集", edit_free_post_path(@free_post) %> |
+  <%= link_to "投稿一覧に戻る", free_posts_path %>
 
-  <%= button_to "Destroy this free post", @free_post, method: :delete %>
+  <%= button_to "この投稿を消す", @free_post, method: :delete %>
 </div>
 <%= render 'comments/form', comment: @comment, free_post: @free_post %>
   <table class="table">

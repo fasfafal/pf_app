@@ -1,7 +1,7 @@
 <%= form_with(model: free_post) do |form| %>
   <% if free_post.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(free_post.errors.count, "error") %> prohibited this free_post from being saved:</h2>
+      <h2><%= pluralize(free_post.errors.count, "エラー") %>がこの投稿の保存を妨げています:</h2>
 
       <ul>
         <% free_post.errors.each do |error| %>
@@ -13,12 +13,12 @@
 
 
   <div>
-    <%= form.label :title, style: "display: block" %>
+    <%= form.label :タイトル, style: "display: block" %>
     <%= form.text_field :title %>
   </div>
 
   <div>
-    <%= form.label :body, style: "display: block" %>
+    <%= form.label :本文, style: "display: block" %>
     <%= form.text_field :body %>
   </div>
 
