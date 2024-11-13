@@ -1,5 +1,5 @@
 <%= form_with model: comment, url: free_post_comments_path(free_post) do |f| %>
-  <%= f.label :body %>
+  <%= f.label 'コメント' %>
   <%= f.text_area :body, class: Comment.human_attribute_name(:body) %>
   <%= f.submit '投稿' %>
 <% end %>
