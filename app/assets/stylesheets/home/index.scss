@@ -2,6 +2,7 @@
 .tab-container {
     display: flex; // フレックスボックスを使用して横並びに
     border-bottom: 2px solid #ccc; // 下にボーダーを追加
+    flex-direction: column;
     justify-content: space-between; // 均等に配置
     margin: 20px 0; // 上下のマージンを調整
    
@@ -11,6 +12,8 @@
       text-align: center; // テキストを中央揃え
       padding: 50px 20px; // タブの内側の余白
       cursor: pointer; // カーソルをポインターに
+
+      color: #fff
 
       a {
       text-decoration: none; // リンクの下線を消す
