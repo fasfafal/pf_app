@@ -1,0 +1,24 @@
+.policy {
+    margin: 20px 0; // 上下のマージンを設定
+    padding: 15px; // 内側のパディングを設定
+    border: 1px solid #ccc; // 薄いグレーの境界線
+    border-radius: 5px; // 角を丸くする
+    background-color: #f9f9f9; // 背景色を薄いグレーに設定
+  
+    h1 {
+      font-size: 1.5em; // h1のフォントサイズを設定
+      color: #333; // h1の文字色を設定
+    }
+  
+    h3 {
+      font-size: 1.2em; // h3のフォントサイズを設定
+      color: #555; // h3の文字色を設定
+      margin-top: 10px; // h3の上マージンを設定
+    }
+  
+    h4 {
+      font-size: 1em; // h4のフォントサイズを設定
+      color: #777; // h4の文字色を設定
+      margin-top: 5px; // h4の上マージンを設定
+    }
+  }
