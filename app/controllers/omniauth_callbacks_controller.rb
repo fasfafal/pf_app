@@ -19,4 +19,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     flash[:notice] = "ログインしました"
     redirect_to redirect_to user_path
   end
+
+  def fake_email(uid, provider)
+    "#{auth.uid}-#{auth.provider}@example.com"
+  end
 end
