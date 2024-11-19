@@ -23,7 +23,7 @@ class User < ApplicationRecord
     credentials = omniauth["credentials"]
     info = omniauth["info"]
     access_token = credentials["refresh_token"]
-    access_secret = credential.to_json
+    access_secret = credentials["secret"]
     credentials = credentials.to_json
     name = info["name"]
   end
