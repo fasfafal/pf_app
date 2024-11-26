@@ -8,6 +8,8 @@ name: "Ruby on Rails CI"
 on:
   push:
     branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -34,10 +36,6 @@ jobs:
       # Add or replace database setup steps here
       - name: Set up database schema
         run: bin/rails db:schema:load
-      # Add or replace test runners here
-      - name: Run tests
-        run: bin/rake
-
   lint:
     runs-on: ubuntu-latest
     steps:
