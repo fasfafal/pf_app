@@ -30,4 +30,4 @@ jobs:
           curl -X POST "https://api.render.com/v1/deploys" \
           -H "Authorization: Bearer $RENDER_TOKEN" \
           -H "Content-Type: application/json" \
-          -d '{"serviceId": "'$RENDER_SERVICE_ID'"}'
+         
