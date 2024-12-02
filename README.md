@@ -21,7 +21,7 @@ Things you may want to cover:
 
 * Deployment instructions
 
-(画面遷移図)[https://github.com/fasfafal/pf_app/blob/main/README.md#%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3]
+[画面遷移図](https://github.com/fasfafal/pf_app/blob/main/README.md#%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3)
 ### ■画面遷移図
 https://www.figma.com/design/BLUZ9k6eQsGVWlM3ZCxetM/%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?node-id=0-1&t=0SccTXVUOmQybcyN-1
 ### ■サービス概要
