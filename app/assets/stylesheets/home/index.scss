@@ -4,9 +4,9 @@
     border-bottom: 2px solid #ccc; // 下にボーダーを追加
     flex-direction: column;
     justify-content: space-between; // 均等に配置
-    margin: 20px 0; // 上下のマージンを調整
-   
-  
+    margin: 5px 0; // 上下のマージンを調整
+    font-weight: 600;   
+    padding:20px;
     .tab {
       flex:1 ; // 均等に広がるようにする
       text-align: center; // テキストを中央揃え
