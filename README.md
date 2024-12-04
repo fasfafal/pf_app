@@ -22,6 +22,22 @@ Things you may want to cover:
 * Deployment instructions
 
 [画面遷移図](https://github.com/fasfafal/pf_app/blob/main/README.md#%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3)
+
+[サービス概要](https://github.com/fasfafal/pf_app?tab=readme-ov-file#%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E6%A6%82%E8%A6%81)
+
+[このサービスへの思い・作りたい理由](https://github.com/fasfafal/pf_app/blob/main/README.md#-%E3%81%93%E3%81%AE%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%B8%E3%81%AE%E6%80%9D%E3%81%84%E4%BD%9C%E3%82%8A%E3%81%9F%E3%81%84%E7%90%86%E7%94%B1)
+
+[ユーザー層について](https://github.com/fasfafal/pf_app?tab=readme-ov-file#-%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E7%8D%B2%E5%BE%97%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
+
+[サービスの利用イメージ](https://github.com/fasfafal/pf_app#%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AE%E5%88%A9%E7%94%A8%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8)
+
+[ユーザーの獲得について](https://github.com/fasfafal/pf_app/blob/main/README.md#-%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E7%8D%B2%E5%BE%97%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
+
+[サービスの差別化ポイント・推しポイント](https://github.com/fasfafal/pf_app/blob/main/README.md#-%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%AE%E5%B7%AE%E5%88%A5%E5%8C%96%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88%E6%8E%A8%E3%81%97%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88)
+
+[MVPリリース](https://github.com/fasfafal/pf_app/blob/main/README.md#mvp%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9)
+
+[MVP以降](https://github.com/fasfafal/pf_app/blob/main/README.md#mvp%E4%BB%A5%E9%99%8D)
 ### ■画面遷移図
 https://www.figma.com/design/BLUZ9k6eQsGVWlM3ZCxetM/%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?node-id=0-1&t=0SccTXVUOmQybcyN-1
 ### ■サービス概要
@@ -72,20 +88,14 @@ https://www.figma.com/design/BLUZ9k6eQsGVWlM3ZCxetM/%E7%94%BB%E9%9D%A2%E9%81%B7%
 -ログイン
 -パスワード機能
   -アドレス変更
--血液型別マッチング機能
-  -交流を行う掲示板機能
--血液型別掲示板の作成
--献血センター一覧機能(MVPの場合、関東限定とする。)
   -掲示板機能
     -制作機能（ユーザー登録をしている人達が献血のコミュニティで話し合ってユーザー登録していない人は閲覧のみできる。）
     -閲覧機能
-  -イベント情報機能
-    -制作機能（ユーザー登録をしている人達が活用できるイベント情報。ユーザー登録していない人は閲覧のみできる。）
-    -閲覧機能
--LINE通知機能
 
 ### MVP以降
--献血ルーム近辺のカフェ登録機能
+-イベント情報機能
+  -制作機能（ユーザー登録をしている人達が活用できるイベント情報。ユーザー登録していない人は閲覧のみできる。）
+  -閲覧機能
 -利用規約機能
 -プライバシーポリシー機能
 ■ 機能の実装方針予定
