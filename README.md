@@ -26,6 +26,8 @@ Things you may want to cover:
 [サービス概要](https://github.com/fasfafal/pf_app?tab=readme-ov-file#%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E6%A6%82%E8%A6%81)
 
 [このサービスへの思い・作りたい理由](https://github.com/fasfafal/pf_app/blob/main/README.md#-%E3%81%93%E3%81%AE%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%81%B8%E3%81%AE%E6%80%9D%E3%81%84%E4%BD%9C%E3%82%8A%E3%81%9F%E3%81%84%E7%90%86%E7%94%B1)
+
+[ユーザー層について](https://github.com/fasfafal/pf_app?tab=readme-ov-file#-%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%AE%E7%8D%B2%E5%BE%97%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
 ### ■画面遷移図
 https://www.figma.com/design/BLUZ9k6eQsGVWlM3ZCxetM/%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?node-id=0-1&t=0SccTXVUOmQybcyN-1
 ### ■サービス概要
