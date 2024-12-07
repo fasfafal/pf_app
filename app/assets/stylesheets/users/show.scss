@@ -7,8 +7,8 @@
  overflow: hidden; /* はみ出た部分を隠す */
 
  .avatar-image{
-  width: 100px;
-  height: 100px;
+  width: 100px;/*要素の幅を100ピクセルにする */
+  height: 100px;/*　要素の高さを100ピクセルにする */
   border-radius: 50%;
   margin:0 auto;
  }
