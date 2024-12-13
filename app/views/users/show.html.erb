@@ -1,10 +1,10 @@
 <div class="top-wrapper"> 
   <h2>マイページ</h2>
   <span class="name">名前：<%= @user.name %></span>
-  <%= link_to edit_user_registration_path,class: 'profile-edit-btn' do %>
+  <%= link_to edit_user_registration_path,class: 'profile-edit-btn' do %> 
     <span>プロフィールの編集</span>  
   <% end %>
-</div>
+</div>#link_toメソッドでHTMLのメソッドを使う場合にはdoを使ってHTMLのメソッドを使用する。閉じる際にはendを使用する。
 
 <table class="table">
   <tr>
