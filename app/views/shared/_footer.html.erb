@@ -8,7 +8,8 @@
   <div>
     <%= link_to "©︎ 2024 -ぶらっと(仮)", root_path, class: "home-link", method: :get %>
   </div>
-  <div class="twitter">#OGPのシェア機能
+  <!-- OGPのシェア機能 -->
+  <div class="twitter">
     <%= link_to 'Xでシェアする', 
       "https://twitter.com/intent/tweet?url=#{CGI.escape('https://pf-app-udpx.onrender.com')}&text=#{CGI.escape('献血を利用する人達のコミュニティを育むことを目的としたアプリです!')}&via=#{CGI.escape('5151b1236776')}&image=#{CGI.escape(image_url('OGP.jpg'))}", 
       method: :get, target: '_blank' 
