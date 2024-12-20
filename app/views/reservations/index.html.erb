@@ -1,5 +1,5 @@
 <% user_reservations = @reservations.select { |reservation| reservation.user_id == current_user.id} %> 
-<!-- 絶対この2行htmlで書くところじゃない。 -->
+
   <% if user_reservations.any? %> 
    <%= month_calendar do |date| %>
     <%= date %>
