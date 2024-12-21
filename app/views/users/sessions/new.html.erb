@@ -1,5 +1,4 @@
 <h2>ログイン</h2>
-<!-- gemのdeviseがform_forの状態になっているためform_withに変更する -->
 <%= form_with(model: resource, url: session_path(resource_name), local: true) do |f| %>
   <div class="field">
     <%= f.label :メールアドレス %><br />
