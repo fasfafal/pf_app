@@ -1,32 +1,32 @@
 .tab-container {
-    display: flex; // フレックスボックスを使用して横並びに
-    border-bottom: 2px solid #ccc; // 下にボーダーを追加
+    display: flex; 
+    border-bottom: 2px solid #ccc; 
     flex-direction: column;
-    justify-content: space-between; // 均等に配置
-    margin: 5px 0; // 上下のマージンを調整
+    justify-content: space-between;
+    margin: 5px 0;
     font-weight: 600;   
     padding:20px;
     .tab {
-      flex:1 ; // 均等に広がるようにする
-      text-align: center; // テキストを中央揃え
-      padding: 50px 20px; // タブの内側の余白
-      cursor: pointer; // カーソルをポインターに
+      flex:1 ;
+      text-align: center;
+      padding: 50px 20px;
+      cursor: pointer;
 
       color: #fff
 
       a {
-      text-decoration: none; // リンクの下線を消す
-      color: #b91e68; // テキストカラー
+      text-decoration: none;
+      color: #b91e68; 
       }
 
   
       &:hover {
-        background-color: #f0f0f0; // ホバー時の背景色
+        background-color: #f0f0f0;
       }
   
       &.active {
-        font-weight: bold; // アクティブタブの太字
-        border-bottom: 2px solid #007bff; // アクティブタブの下にボーダー
+        font-weight: bold; 
+        border-bottom: 2px solid #007bff; 
       }
     }
   }
