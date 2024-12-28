@@ -10,6 +10,12 @@
 @import 'policy';
 @import 'about';
 @import 'users/show';
+.top-wrapper {
+    background-image: url("cac4ef7ff82734c6934944c3b77e7191.webp");
+    height: calc(100vh - 134px);
+    position: relative;
+    background-position: center;
+}
 h1{
     color: #b91e68 ;
 }
