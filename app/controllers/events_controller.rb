@@ -50,11 +50,17 @@ class EventsController < ApplicationController
 
   # DELETE /events/1 or /events/1.json
   def destroy
-    @event.destroy!
-
-    respond_to do |format|
-      format.html { redirect_to events_url, notice: "Event was successfully destroyed." }
-      format.json { head :no_content }
+    if @event.user_id == current_user.id
+      @event.destroy!
+      respond_to do |format|
+        format.html { redirect_to events_url, notice: "イベントを削除しました!" }
+        format.json { head :no_content }
+      end
+    else
+      respond_to do |format|
+        format.html { redirect_to events_url, alert: "イベントを削除する権限がないっす" }
+        format.json { render json: { error: "You are not authorized to delete this event." }, status: forbidden }
+      end
     end
   end
 
