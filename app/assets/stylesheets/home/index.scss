@@ -1,16 +1,15 @@
 .tab-container {
-    display: flex; 
+     
+    display: flex;
     border-bottom: 2px solid #ccc; 
-    flex-direction: column;
     justify-content: space-between;
     margin: 5px 0;
     font-weight: 600;   
-    padding:20px 5px;
+    padding:20px 1px;
     .tab {
-      flex:1 ;
+      width: 500px;
       text-align: center;
-      margin: 5px 5px;
-      padding: 40px 2px;
+      padding: 40px 1px;
       cursor: pointer;
 
       color: #fff
