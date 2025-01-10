@@ -1,7 +1,32 @@
 .simple-calendar {
+    .day {}
+
+    .wday-0 {}
+    .wday-1 {}
+    .wday-2 {}
+    .wday-3 {}
+    .wday-4 {}
+    .wday-5 {}
+    .wday-6 {}
+  
+    .today {}
+    .past {}
+    .future {}
+  
+    .start-date {}
+  
+    .prev-month {}
+    .next-month { }
+    .current-month {}
+  
+    .has-events {}
     background-color: #b91e68;
-    width: 200px ;
-    height: 200px ;
+    table-layout: fixed;
+    height: 400px ;
+    overflow: hidden;
+    text-overflow: ellipsis;
     white-space: nowrap;
-   
- }
+    position: sticky;
+    top:0 ;
+    left:0 ;
+   }
