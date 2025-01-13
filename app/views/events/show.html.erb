@@ -1,10 +1,11 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @event %>
+  <% if @event.user == current_user %>
+    <td><%= link_to "このイベントを編集する", edit_event_path(@event) %> |</td>
+    <td><%= link_to "戻る", events_path %></td>
+  <% else %>
+    <td></td>
+    <td><%= link_to "戻る", events_path %></td>
+  <% end %>
 
-<div>
-  <%= link_to "このイベントを編集する", edit_event_path(@event) %> |
-  <%= link_to "戻る", events_path %>
-
-  <%= button_to "このイベントを消す", @event, method: :delete %>
-</div>
