@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   before_action :authenticate_user!, only: %i[ new edit update destroy ]
-  before_action :set_event, only: %i[ show edit update destroy ]
+  before_action :set_event, only: %i[ show edit update destroy]
 
   # GET /events or /events.json
   def index
@@ -22,8 +22,7 @@ class EventsController < ApplicationController
 
   # POST /events or /events.json
   def create
-    @event = Event.new(event_params)
-
+    @event = current_user.events.build(event_params)
     respond_to do |format|
       if @event.save
         format.html { redirect_to event_url(@event), notice: "Event was successfully created." }
@@ -50,24 +49,18 @@ class EventsController < ApplicationController
 
   # DELETE /events/1 or /events/1.json
   def destroy
-    if @event.user_id == current_user.id
-      @event.destroy!
-      respond_to do |format|
-        format.html { redirect_to events_url, notice: "イベントを削除しました!" }
-        format.json { head :no_content }
-      end
-    else
-      respond_to do |format|
-        format.html { redirect_to events_url, alert: "イベントを削除する権限がないっす" }
-        format.json { render json: { error: "You are not authorized to delete this event." }, status: forbidden }
-      end
+    user_id = current_user.events.find(params[:id])
+    if @event.destroy!
+      event = Event.find_by(id: event)
+      redirect_to events_path, success: "イベントを削除しました!" 
     end
   end
-
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_event
       @event = Event.find(params[:id])
+      redirect_to new_event_path unless @event
     end
 
     # Only allow a list of trusted parameters through.

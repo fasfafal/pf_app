@@ -4,7 +4,7 @@
 
 <br>
 
-<div>
   <%= link_to "このイベントの詳細を見る", @event %> |
+  <%= button_to "このイベントを消す", @event, method: :delete %>
   <%= link_to "戻る", events_path %>
 </div>
